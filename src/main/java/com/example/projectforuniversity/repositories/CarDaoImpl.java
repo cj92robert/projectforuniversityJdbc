@@ -39,7 +39,7 @@ public class CarDaoImpl implements CarDao {
                         );
         var totalElement= jdbcTemplate
                 .queryForObject("SELECT COUNT(*) FROM cars WHERE colour LIKE ?",
-                        Integer.class,colour+"%");
+                        Integer.class,colour.toLowerCase()+"%");
 
         return new CarPage(totalElement,currentPage,carList1);
     }

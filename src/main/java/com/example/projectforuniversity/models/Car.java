@@ -53,7 +53,7 @@ public class Car {
   }
 
   public void setColour(String colour) {
-    this.colour = colour;
+    this.colour = colour.toLowerCase();
   }
 
 
