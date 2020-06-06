@@ -34,8 +34,8 @@ public class CarDaoImpl implements CarDao {
                 .query("SELECT * FROM cars WHERE colour LIKE ? LIMIT ?,?",
                         carRowMapper,
                         colour+"%",
-                        (10 * (currentPage - 1)),
-                        9
+                        (5 * (currentPage - 1)),
+                        5
                         );
         var totalElement= jdbcTemplate
                 .queryForObject("SELECT COUNT(*) FROM cars WHERE colour LIKE ?",
