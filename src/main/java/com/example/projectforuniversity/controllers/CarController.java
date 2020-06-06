@@ -36,7 +36,7 @@ public class CarController {
                 new ResponseEntity(HttpStatus.NOT_FOUND):
                 new ResponseEntity(HttpStatus.OK);
     }
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity update(@RequestBody Car car, @PathVariable long id){
         return carRepository.update(id,car)==0?
                 new ResponseEntity(HttpStatus.NOT_FOUND):
