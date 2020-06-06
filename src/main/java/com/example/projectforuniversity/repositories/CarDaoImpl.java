@@ -79,6 +79,6 @@ public class CarDaoImpl implements CarDao {
     @Override
     public int deleteById(long id) {
         return jdbcTemplate
-                .update("DELETE FROM cars WHERE id=?");
+                .update("DELETE FROM cars WHERE id=?",id);
     }
 }
