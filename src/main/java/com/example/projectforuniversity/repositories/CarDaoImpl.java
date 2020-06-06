@@ -35,10 +35,12 @@ public class CarDaoImpl implements CarDao {
                         carRowMapper,
                         colour+"%",
                         (10 * (currentPage - 1)),
-                        10
+                        9
                         );
         var totalElement= jdbcTemplate
-                .queryForObject("SELECT COUNT(*) FROM cars",Integer.class);
+                .queryForObject("SELECT COUNT(*) FROM cars WHERE colour LIKE ?",
+                        Integer.class,colour+"%");
+
         return new CarPage(totalElement,currentPage,carList1);
     }
 
