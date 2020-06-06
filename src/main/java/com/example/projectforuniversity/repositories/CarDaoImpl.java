@@ -72,8 +72,8 @@ public class CarDaoImpl implements CarDao {
     @Override
     public int update(long id, Car car) {
         return jdbcTemplate
-                .update("UPDATE cars SET model=?, car_make=?, colour=?,year=?",
-                        car.getModel(),car.getCarMake(),car.getColour(),car.getYear());
+                .update("UPDATE cars SET model=?, car_make=?, colour=?, year=? WHERE id=?",
+                        car.getModel(),car.getCarMake(),car.getColour(),car.getYear(),id);
     }
 
     @Override
