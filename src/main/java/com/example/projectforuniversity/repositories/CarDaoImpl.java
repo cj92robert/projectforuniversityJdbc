@@ -37,9 +37,9 @@ public class CarDaoImpl implements CarDao {
                         (10 * (currentPage - 1)),
                         10
                         );
-        var totalPage= jdbcTemplate
+        var totalElement= jdbcTemplate
                 .queryForObject("SELECT COUNT(*) FROM cars",Integer.class);
-        return new CarPage(totalPage,currentPage,carList1);
+        return new CarPage(totalElement,currentPage,carList1);
     }
 
     @Override

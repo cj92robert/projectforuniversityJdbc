@@ -1,29 +1,27 @@
 package com.example.projectforuniversity.models;
 
-import com.example.projectforuniversity.models.Car;
-
 import java.util.List;
 
 public class CarPage {
-    private int pageTotal;
+    private int elementTotal;
     private int currentPage;
     private List<Car> listCars;
 
     public CarPage() {
     }
 
-    public CarPage(int pageTotal, int currentPage, List<Car> listCars) {
-        this.pageTotal = pageTotal;
+    public CarPage(int elementTotal, int currentPage, List<Car> listCars) {
+        this.elementTotal = elementTotal;
         this.currentPage = currentPage;
         this.listCars = listCars;
     }
 
-    public int getPageTotal() {
-        return pageTotal;
+    public int getElementTotal() {
+        return elementTotal;
     }
 
-    public void setPageTotal(int pageTotal) {
-        this.pageTotal = pageTotal;
+    public void setElementTotal(int elementTotal) {
+        this.elementTotal = elementTotal;
     }
 
     public int getCurrentPage() {
