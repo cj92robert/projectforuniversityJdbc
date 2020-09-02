@@ -64,7 +64,7 @@ public class CarDaoImpl implements CarDao {
     @Override
     public int save(Car car) {
          return jdbcTemplate
-                .update("INSERT INTO cars (model, car_make, colour, year) value (?,?,?,?)",
+                .update("INSERT INTO cars (model, car_make, colour, year) values (?,?,?,?)",
                         car.getModel(),
                         car.getCarMake(),
                         car.getColour(),

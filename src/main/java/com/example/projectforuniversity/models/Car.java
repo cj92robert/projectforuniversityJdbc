@@ -1,6 +1,8 @@
 package com.example.projectforuniversity.models;
 
 
+import com.google.common.base.Preconditions;
+
 public class Car {
 
 
@@ -62,6 +64,8 @@ public class Car {
   }
 
   public void setYear(long year) {
+    Preconditions.checkArgument((year>0&& year<3000),"Not allow value of year");
+    //if(year<0 || year>3000) throw new IllegalArgumentException("Year not alow value");
     this.year = year;
   }
 
